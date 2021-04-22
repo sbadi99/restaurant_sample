@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <TextView
+      android:id="@+id/item_description"
+      style="?android:attr/textAppearanceLarge"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:maxLines="5"
+      android:layout_margin="@dimen/view_margin"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:context=".ui.fragment.ItemDetailFragment"
+      />
+
+  <LinearLayout
+      android:id="@+id/rating_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/item_description"
+      >
+    <TextView
+        android:id="@+id/restaurant_ratings"
+        style="?android:attr/textAppearanceSmall"
+        android:layout_margin="@dimen/view_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:context=".ui.fragment.ItemDetailFragment"
+        />
+    <TextView
+        android:id="@+id/restaurant_review_count"
+        style="?android:attr/textAppearanceSmall"
+        android:layout_margin="@dimen/view_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:context=".ui.fragment.ItemDetailFragment"
+        />
+  </LinearLayout>
+
+  <com.google.android.material.card.MaterialCardView
+      android:id="@+id/restaurant_fee_view"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/view_margin"
+      android:layout_marginStart="@dimen/view_margin"
+      android:layout_marginEnd="@dimen/view_margin"
+      app:cardElevation="@dimen/elevation"
+      app:strokeWidth="@dimen/stroke_width"
+      app:strokeColor="@color/red"
+      app:cardBackgroundColor="@color/white"
+      app:cardCornerRadius="@dimen/view_margin"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/item_description"
+      >
+
+    <TextView
+        android:id="@+id/restaurant_fee"
+        android:layout_margin="@dimen/view_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        tools:context=".ui.fragment.ItemDetailFragment"
+        />
+
+  </com.google.android.material.card.MaterialCardView>
+
+      <TextView
+          android:id="@+id/address"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/margin_large_size"
+          android:padding="@dimen/view_padding"
+          android:gravity="center_horizontal"
+          style="@style/Widget.MaterialComponents.CardView"
+          android:layout_marginStart="@dimen/view_margin"
+          android:layout_marginEnd="@dimen/view_margin"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/rating_view"
+          android:background="@drawable/rectangle_border"
+          tools:context=".ui.fragment.ItemDetailFragment"
+          />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

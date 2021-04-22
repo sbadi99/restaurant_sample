@@ -1,0 +1,10 @@
+<resources>
+  <string name="app_name">Discover</string>
+  <string name="title_item_detail">Item Detail</string>
+  <string name="location_required_rationale">test</string>
+
+  <string name="closing_time"> %d Mins</string>
+  <string name="review_count"> %s+ ratings</string>
+  <string name="delivery_fee_label"> delivery fee %s</string>
+  <string name="closed">Closed</string>
+</resources>
